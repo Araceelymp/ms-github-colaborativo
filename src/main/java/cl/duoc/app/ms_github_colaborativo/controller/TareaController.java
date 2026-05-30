@@ -11,6 +11,10 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/tareas")
 public class TareaController {
+    @GetMapping ("/responsable/{responsable}")
+    public List listarPorResponsable(@PathVariable String responsable) {
+        return tareaService.listarPorResponsable (responsable);
+    }
 
     private final TareaService tareaService;
 
