@@ -23,6 +23,12 @@ public class TareaService {
         return tareas;
     }
 
+    public List listarPorResponsable(String responsable) {
+        return tareas.stream()
+                .filter(t -> t.getResponsable().equalsIgnoreCase(responsable))
+                .toList();
+    }
+
     public Optional<Tarea> buscarPorId(Long id) {
         return tareas.stream()
                 .filter(t -> t.getId().equals(id))

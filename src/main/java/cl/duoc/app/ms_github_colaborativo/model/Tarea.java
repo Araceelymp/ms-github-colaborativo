@@ -8,6 +8,16 @@ public class Tarea {
     private String responsable;
     private boolean completada;
 
+    public String getPrioridad() {
+        return prioridad;
+    }
+
+    public void setPrioridad(String prioridad) {
+        this.prioridad = prioridad;
+    }
+
+    private String prioridad;
+
     public Tarea() {
     }
 
