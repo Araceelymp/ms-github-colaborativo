@@ -7,16 +7,18 @@ public class Tarea {
     private String descripcion;
     private String responsable;
     private boolean completada;
+    private String prioridad;
 
     public Tarea() {
     }
 
-    public Tarea(Long id, String titulo, String descripcion, String responsable, boolean completada) {
+    public Tarea(Long id, String titulo, String descripcion, String responsable, boolean completada, String prioridad) {
         this.id = id;
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.responsable = responsable;
         this.completada = completada;
+        this.prioridad = prioridad;
     }
 
     public Long getId() {
@@ -39,6 +41,9 @@ public class Tarea {
         return completada;
     }
 
+    public String getPrioridad() {
+        return prioridad; }
+
     public void setId(Long id) {
         this.id = id;
     }
@@ -58,4 +63,8 @@ public class Tarea {
     public void setCompletada(boolean completada) {
         this.completada = completada;
     }
+
+    public void setPrioridad(String prioridad) {
+        this.prioridad = prioridad; }
+
 }
